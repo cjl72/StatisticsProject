@@ -48,7 +48,21 @@ The simplest possible example for this is with calculating the area of three sha
 shapes but all different calculations.
 
 ## SOLID JavaScript Principles
+These SOLID principles are OOP principles but catered more towards JavaScript.  Javascript can work
+like the other object-oriented languages.  But in most cases you wanted to use different principles to 
+keep the same amount of reliability.
 ### 1. S - Single Responsibility Principle
+This first principle is very straight forward and not a trick.  The Single Responsibility Principle states
+that every function should do exactly one thing.  This is a very simple rule, but when programming it is
+very easy to look over.  I personally do this a lot where I try to do too much at one time.  In this
+repository we followed this principle well which can be seen in the following code.  All the calculator 
+functions are simple and only calculate one thing using only two numbers.
+```
+function Square (a) {
+    return a * a;
+}
+```
+This function clearly takes one number and squares is, that's it.  One simple function.
 ### 2. O - Open-Closed Principle
 ### 3. L - Liskov Substitution Principle
 ### 4. I - Interface Segregation Principle
