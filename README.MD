@@ -77,8 +77,23 @@ touching the file itself at all.
 The Liskov Substitution Principle is in simple terms things that sound right or make sense in natural
 language don't always work expected in code involving inheritance.  To follow this principle means that
 a child and parent element are interchangeable in terms of the methods.  This will be clear when we build
-the statistics calculator which inherits the original calculator.  But, calling the Sum function will be the 
+the statistics calculator which inherits the original calculator.  Calling the Sum function will be the 
 same in both the calculator and the statistics calculator.
 
 ### 4. I - Interface Segregation Principle
+This is a simple principle in where simplicity is king once again.  You do not want to create interfaces
+that are full of extra things needed to be implemented to do one function.  The essentials should always
+be present but anything else should be optional.  This needs to be coded in, so one must remember this
+principle day to day.  In this example code this method Difference is creating a new calculation, 
+adding the calculation to Calculations and returning the result.  All we have to do though is call
+Calculator.Difference(a,b);
+```
+static Difference(a,b) {
+        let calculation = new Calculation(a,b,Difference);
+        Calculator.Calculations.push(calculation);
+        return calculation.GetResults();
+    }
+```
+This makes it simple to work with your code.  This is very important when working in teams on coding projects.
+
 ### 5. D - Dependency Inversion Principle
