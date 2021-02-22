@@ -6,6 +6,7 @@ A class is used to create the objects, a constructor.  Classes also contain meth
 which can be called on the object created by the class.  The best way to think about this is
 as the class as a blueprint, a design, for an object.  Inside these blueprints it can create
 objects and also tell the object what to do if called.
+
 ### 1. Encapsulation
 Encapsulation is reached when an object is in a private state.  This prevents outside access into the
 state of the object.  This protects it from change and such.  This can be exemplified by the 
@@ -17,6 +18,7 @@ static Calculations = []
         Calculator.Calculations.push(calculation);
         return calculation.GetResults();
 ```
+
 ### 2. Abstraction
 Abstraction is a relatively easy OOP concept.  An object should only have one high-level mechanism
 for using it.  An example of this is clicking a button to turn on the tv.  This button object turns on
@@ -29,11 +31,12 @@ function Sum (a,b) {
 }
 module.exports = Sum;
 ```
+
 ### 3. Inheritance
 The issue that inheritance tackles is that objects can be very similar but clearly different.
 How inheritance fixes that is by creating child classes that have parent classes.  One example of this
 is professors at the university.  They are all a professor object, but not all professors are the same.
-Through this objects can inherit the aspects of their parent object but also build upon it with their
+Through this, objects can inherit the aspects of their parent object but also build upon it with their
 own specific aspects.  The following is the example in the code on how inheritance is used in the calculator.
 Here the StatisticsCalculator that will be made will inherit the Calculator object for basic functions.
 ```
@@ -63,7 +66,13 @@ function Square (a) {
 }
 ```
 This function clearly takes one number and squares is, that's it.  One simple function.
+
 ### 2. O - Open-Closed Principle
+The second principle here is the Open-Closed Principle.  This principle simply put means that the 
+JavaScript modules you are creating should be open for extension, but closed to any modification.
+There should be functions built into your module so that you can access it from anywhere without
+touching the file itself at all.
+
 ### 3. L - Liskov Substitution Principle
 ### 4. I - Interface Segregation Principle
 ### 5. D - Dependency Inversion Principle
