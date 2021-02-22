@@ -74,5 +74,11 @@ There should be functions built into your module so that you can access it from 
 touching the file itself at all.
 
 ### 3. L - Liskov Substitution Principle
+The Liskov Substitution Principle is in simple terms things that sound right or make sense in natural
+language don't always work expected in code involving inheritance.  To follow this principle means that
+a child and parent element are interchangeable in terms of the methods.  This will be clear when we build
+the statistics calculator which inherits the original calculator.  But, calling the Sum function will be the 
+same in both the calculator and the statistics calculator.
+
 ### 4. I - Interface Segregation Principle
 ### 5. D - Dependency Inversion Principle
