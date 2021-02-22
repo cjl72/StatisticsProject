@@ -97,3 +97,12 @@ static Difference(a,b) {
 This makes it simple to work with your code.  This is very important when working in teams on coding projects.
 
 ### 5. D - Dependency Inversion Principle
+The Dependency Inversion Principle can also be said as the Dependency Injection Principle.
+With this principle the higher level modules should not rely on the lower level modules to work.
+In our calculator code the calculator is able to create a calculation by calling one function, 
+calculation.  By doing this we can define the type of calculation high level without having to call
+different functions at all.
+```
+let calculation = new Calculation(10,5, Sum);
+    expect(calculation.GetResults()).toBe(15);
+```
