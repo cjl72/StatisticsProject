@@ -41,6 +41,11 @@ class StatisticsCalculator extends Calculator{
 }
 ```
 ### 4. Polymorphism
+Polymorphism is the fourth principle which means "many shapes" in Greek.  Polymorphism is something that 
+happens in the background.  The language is smart enough to tell when a parent and children objects
+appear together, and sees they are different, the same method name, but different function.
+The simplest possible example for this is with calculating the area of three shapes, they are all 
+shapes but all different calculations.
 
 ## SOLID JavaScript Principles
 ### 1. S - Single Responsibility Principle
