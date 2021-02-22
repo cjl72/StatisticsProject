@@ -30,6 +30,16 @@ function Sum (a,b) {
 module.exports = Sum;
 ```
 ### 3. Inheritance
+The issue that inheritance tackles is that objects can be very similar but clearly different.
+How inheritance fixes that is by creating child classes that have parent classes.  One example of this
+is professors at the university.  They are all a professor object, but not all professors are the same.
+Through this objects can inherit the aspects of their parent object but also build upon it with their
+own specific aspects.  The following is the example in the code on how inheritance is used in the calculator.
+Here the StatisticsCalculator that will be made will inherit the Calculator object for basic functions.
+```
+class StatisticsCalculator extends Calculator{
+}
+```
 ### 4. Polymorphism
 
 ## SOLID JavaScript Principles
