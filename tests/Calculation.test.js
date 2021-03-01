@@ -36,3 +36,8 @@ test('Test Get results for squareRoot function', () => {
     let calculation = new Calculation(25, null, squareRoot);
     expect(calculation.GetResults()).toBe(5);
 });
+test('Testing clone method', () => {
+    let calculation = new Calculation(25, 25, Sum);
+    let cloneCalculation = calculation.clone(calculation);
+    expect(calculation === cloneCalculation.prototype);
+})

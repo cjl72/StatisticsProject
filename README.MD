@@ -106,3 +106,25 @@ different functions at all.
 let calculation = new Calculation(10,5, Sum);
     expect(calculation.GetResults()).toBe(15);
 ```
+
+## Design Patterns
+### Creational
+The creational pattern that I implemented is the prototype design, also known as clone.
+The basis of this design pattern is the clone method.  What this method is doing is cloning an object
+through a common interface.  When an object supports cloning it is called a prototype.
+In simple terms instead of having to construct a new object from scratch to duplicate an object
+you can simply call the clone method. Here you can see my clone method and test
+```
+clone(calc) {
+        return Object.create(calc);
+    }
+```
+```
+test('Testing clone method', () => {
+    let calculation = new Calculation(25, 25, Sum);
+    let cloneCalculation = calculation.clone(calculation);
+    expect(calculation === cloneCalculation.prototype);
+})
+```
+### Structural
+### Behavioral
