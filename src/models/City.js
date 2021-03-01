@@ -16,3 +16,4 @@ class City {
         return new City(data);
     }
 }
+module.exports = City;
