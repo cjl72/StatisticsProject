@@ -40,4 +40,5 @@ class Calculator {
         return calculation.GetResults();
     }
 }
+
 module.exports = Calculator;
