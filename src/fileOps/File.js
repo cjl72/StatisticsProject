@@ -5,3 +5,4 @@ class File {
         return fullPath;
     }
 }
+module.exports = File;
