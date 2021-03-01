@@ -4,8 +4,8 @@ class Calculation{
         this.b = b;
         this.op = op;
     }
-    clone(calc) {
-        return Object.create(calc);
+    clone() {
+        return Object.create(this);
     }
 
     transform(calc, op) {

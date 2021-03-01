@@ -38,7 +38,7 @@ test('Test Get results for squareRoot function', () => {
 });
 test('Testing clone method', () => {
     let calculation = new Calculation(25, 25, Sum);
-    let cloneCalculation = calculation.clone(calculation);
+    let cloneCalculation = calculation.clone();
     expect(calculation === cloneCalculation.prototype);
 })
 test('Testing decorator', () => {

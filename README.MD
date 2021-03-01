@@ -115,8 +115,8 @@ through a common interface.  When an object supports cloning it is called a prot
 In simple terms instead of having to construct a new object from scratch to duplicate an object
 you can simply call the clone method. Here you can see my clone method and test
 ```
-clone(calc) {
-        return Object.create(calc);
+clone() {
+        return Object.create(this);
     }
 ```
 ```
@@ -147,4 +147,3 @@ test('Testing decorator', () => {
 })
 ```
 ### Behavioral
-The behavioral design pattern that I chose is
