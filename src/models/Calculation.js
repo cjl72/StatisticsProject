@@ -7,6 +7,13 @@ class Calculation{
     clone(calc) {
         return Object.create(calc);
     }
+
+    transform(calc, op) {
+        calc.isTransformed = true;
+        calc.op = op;
+        return calc;
+    }
+
     GetResults() {
         return this.op(this.a, this.b)
     }

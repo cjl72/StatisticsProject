@@ -109,7 +109,7 @@ let calculation = new Calculation(10,5, Sum);
 
 ## Design Patterns
 ### Creational
-The creational pattern that I implemented is the prototype design, also known as clone.
+The creational design pattern that I implemented is the prototype design, also known as clone.
 The basis of this design pattern is the clone method.  What this method is doing is cloning an object
 through a common interface.  When an object supports cloning it is called a prototype.
 In simple terms instead of having to construct a new object from scratch to duplicate an object
@@ -127,4 +127,23 @@ test('Testing clone method', () => {
 })
 ```
 ### Structural
+The structural design pattern that I chose is the decorator patter.  This allows you to change object while inside
+special wrappers.  Usually you can not change the aspects of an object after constructed.  The issue is that inheritance
+is static, meaning you can't alter the behavior of the object after instantiation.  I created a decorator inside my
+calculation class.  Following you can see the decorator class that adds the istransformed attribute and changes
+the operation.
+```
+transform(calc, op) {
+        calc.isTransformed = true;
+        calc.op = op;
+        return calc;
+    }
+```
+```
+test('Testing decorator', () => {
+    let calculation = new Calculation(25, 25, Sum);
+    calculation.transform(calculation, Difference);
+    expect(calculation.GetResults()).toBe(0);
+})
+```
 ### Behavioral

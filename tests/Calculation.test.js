@@ -41,3 +41,8 @@ test('Testing clone method', () => {
     let cloneCalculation = calculation.clone(calculation);
     expect(calculation === cloneCalculation.prototype);
 })
+test('Testing decorator', () => {
+    let calculation = new Calculation(25, 25, Sum);
+    calculation.transform(calculation, Difference);
+    expect(calculation.GetResults()).toBe(0);
+})
