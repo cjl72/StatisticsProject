@@ -13,4 +13,4 @@ function Median(data) {
     else
         return (Quotient(Sum(data[half-1], data[half]), 2.0));
 }
-module.exports = Median; 
+module.exports = Median;
