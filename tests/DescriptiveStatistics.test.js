@@ -1,6 +1,7 @@
 const math = require('mathjs');
 const Mean = require('../src/DescriptiveStatistics/Mean');
 const Median = require('../src/DescriptiveStatistics/Median');
+const Mode = require('../src/DescriptiveStatistics/Mode');
 
 
 test('Test Mean Function', () => {
@@ -10,4 +11,8 @@ test('Test Mean Function', () => {
 test('Test Median Function', () => {
     const testData = [1,2,3,4,5,6];
     expect(Median(testData)).toBe(3.5);
+});
+test('Test Mode Function', () => {
+   const testData = [1,1,2,3,4,5,6];
+   expect(Mode(testData)).toStrictEqual([1]);
 });
