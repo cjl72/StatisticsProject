@@ -1,7 +1,7 @@
 [![Coverage Status](https://coveralls.io/repos/github/cjl72/calculator219/badge.svg?branch=master)](https://coveralls.io/github/cjl72/calculator219?branch=master)
 [![Build Status](https://www.travis-ci.com/cjl72/calculator219.svg?branch=master)](https://www.travis-ci.com/cjl72/calculator219)
 
-##Calculator Object
+## Calculator Object
 Properties 
     Result
 Methods
@@ -19,10 +19,10 @@ Math Operations Static Functions
     Square
     squareRoot
 
-##Statistics Calculator Object
+## Statistics Calculator Object
 Properties
     Result
-##Methods
+## Methods
 Mean -> Call mean static method from Descriptive Statistics
 Median -> Call median static method from Descriptive Statistics
 Mode -> Call mode static method from Descriptive Statistics
@@ -49,7 +49,7 @@ FindConfidenceInterval -> Call findConf static method from Population Sampling
 Cochran -> Call cochran static method from Population Sampling
 SampleSizeUnknown -> Call findSample static method from Population Sampling
 SampleSizeKnown -> Call findSampleKnown static method from Population Sampling
-##Descriptive Statistics Functions Static Functions
+## Descriptive Statistics Functions Static Functions
 Mean
 Median
 Mode
@@ -60,7 +60,7 @@ Skewness
 PopulationCorrelation
 SampleCorrelation
 
-##Random Generator Function Static Functions
+## Random Generator Function Static Functions
 GenerateNumNoSeed
 GenerateNumSeed
 GenerateList
@@ -69,7 +69,7 @@ SetAndSelectSeed
 SelectItemsNoSeed
 SelectItemsSeed
 
-##Population Sampling Function Static Class(s)
+## Population Sampling Function Static Class(s)
 SimpleRandomSampling
 SystematicSampling
 ConfidenceInterval
