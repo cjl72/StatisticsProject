@@ -3,6 +3,7 @@ const Mean = require('../src/DescriptiveStatistics/Mean');
 const Median = require('../src/DescriptiveStatistics/Median');
 const Mode = require('../src/DescriptiveStatistics/Mode');
 const Variance = require('../src/DescriptiveStatistics/Variance');
+const StandardDeviation = require('../src/DescriptiveStatistics/StandardDeviation');
 
 
 test('Test Mean Function', () => {
@@ -20,4 +21,8 @@ test('Test Mode Function', () => {
 test('Test Variance Function', () => {
     const testData = [1,2,3,4,5,6];
     expect(Variance(testData)).toBe(math.variance(testData));
+});
+test('Test StandardDeviation Function', () => {
+    const testData = [1,2,3,4,5,6];
+    expect(StandardDeviation(testData)).toBe(math.std(testData));
 });
