@@ -4,8 +4,11 @@ const Square = require('../operations/Square');
 
 function Variance (data) {
     let mean = Mean(data);
-    return Mean(data.map(function(num) {
-        return Square(num - mean);
-    }));
+    let total = 0;
+    let l = data.length;
+    data.forEach(function(x){
+        total += Square(x - mean);
+    })
+    return total/(l-1);
 }
 module.exports = Variance;
