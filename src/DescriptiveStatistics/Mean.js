@@ -3,10 +3,10 @@ const Quotient = require('../operations/Quotient');
 
 function Mean(data) {
     const length = data.length;
-    let total = 0;
+    let summation = 0;
     data.forEach(function(x) {
-        total = Sum(total, x);
+        summation = Sum(summation, x);
     });
-    return Quotient(total, length);
+    return Quotient(summation, length);
 }
 module.exports = Mean;
