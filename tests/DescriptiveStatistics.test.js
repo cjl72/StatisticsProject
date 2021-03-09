@@ -4,6 +4,7 @@ const Median = require('../src/DescriptiveStatistics/Median');
 const Mode = require('../src/DescriptiveStatistics/Mode');
 const Variance = require('../src/DescriptiveStatistics/Variance');
 const StandardDeviation = require('../src/DescriptiveStatistics/StandardDeviation');
+const Quartiles = require('../src/DescriptiveStatistics/Quartiles');
 
 
 test('Test Mean Function', () => {
@@ -26,3 +27,10 @@ test('Test StandardDeviation Function', () => {
     const testData = [1,2,3,4,5,6];
     expect(StandardDeviation(testData)).toBe(math.std(testData));
 });
+test('Test Quartiles Function', () => {
+    const testData = [1,2,3,4,5,6];
+    expect(Quartiles(testData)).toStrictEqual([math.quantileSeq(testData, 0.25, this.sorted),
+        math.quantileSeq(testData, 0.5, this.sorted),
+        math.quantileSeq(testData, 0.75, this.sorted)]);
+});
+
