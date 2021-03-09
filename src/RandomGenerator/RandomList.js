@@ -1,6 +1,7 @@
-function random_list(list)
-{
-    return list[Math.floor(Math.random()*list.length)];
+function RandomList(rand){
+
+    var rand = rand[Math.floor(Math.random() * rand.length)];
+
 }
-var items = [254, 45, 212, 365, 2543];
-console.log(random_list(items));
+module.exports = rand;
+
