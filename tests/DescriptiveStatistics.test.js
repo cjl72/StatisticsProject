@@ -7,6 +7,8 @@ const StandardDeviation = require('../src/DescriptiveStatistics/StandardDeviatio
 const Quartiles = require('../src/DescriptiveStatistics/Quartiles');
 const Skewness = require('../src/DescriptiveStatistics/Skewness');
 const skewness = require('compute-skewness');
+const Covariance = require('../src/DescriptiveStatistics/Covariance');
+const cov = require('compute-covariance');
 
 
 test('Test Mean Function', () => {
@@ -38,5 +40,10 @@ test('Test Quartiles Function', () => {
 test('Test Skewness Function', () => {
     const testData = [1,2,3,4,5,6];
     expect(Skewness(testData)).toBe(skewness(testData));
+});
+test('Test Covariance Function', () => {
+    const testData = [1,2,3,4,5,6];
+    const testData2 = [1,1,1,1,1,1];
+    expect(Covariance(testData, testData2)).toStrictEqual(cov(testData, testData2));
 });
 
