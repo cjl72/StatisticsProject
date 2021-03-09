@@ -5,6 +5,8 @@ const Mode = require('../src/DescriptiveStatistics/Mode');
 const Variance = require('../src/DescriptiveStatistics/Variance');
 const StandardDeviation = require('../src/DescriptiveStatistics/StandardDeviation');
 const Quartiles = require('../src/DescriptiveStatistics/Quartiles');
+const Skewness = require('../src/DescriptiveStatistics/Skewness');
+const skewness = require('compute-skewness');
 
 
 test('Test Mean Function', () => {
@@ -32,5 +34,9 @@ test('Test Quartiles Function', () => {
     expect(Quartiles(testData)).toStrictEqual([math.quantileSeq(testData, 0.25, this.sorted),
         math.quantileSeq(testData, 0.5, this.sorted),
         math.quantileSeq(testData, 0.75, this.sorted)]);
+});
+test('Test Skewness Function', () => {
+    const testData = [1,2,3,4,5,6];
+    expect(Skewness(testData)).toBe(skewness(testData));
 });
 
