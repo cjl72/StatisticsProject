@@ -1,6 +1,30 @@
-function random_list(list)
-{
-    return list[Math.floor(Math.random()*list.length)];
+function randomListDec(a,b,length,sd){
+    if(Number.isInteger(a)){
+        return randomListInt(a, b, length, sd);
+    }
+    let lst = [];
+    math.seed(sd);
+    for (i = 0; i < length; i++) {
+        let num = function(min, max) {
+            return Math.random() * (max - min) + min;
+        }
+        lst.push(num);
+    }
+    return lst;
 }
-var items = [254, 45, 212, 365, 2543];
-console.log(random_list(items));
+function randomListInt(a,b,length,sd){
+    let lst = [];
+    math.seed(sd);
+    for (i = 0; i < length; i++) {
+        let num = function(min, max) {
+            min = Math.ceil(min);
+            max = Math.floor(max);
+            return Math.floor(Math.random() * (max - min) + min);
+        }
+        lst.push(num);
+    }
+    return lst;
+}
+
+module.exports = randomListInt;
+module.exports = randomListDec;
