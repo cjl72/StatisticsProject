@@ -1,4 +1,4 @@
-function SampleCorrelation(data) {
+function SampleCorrelation() {
 
 }
 module.exports = SampleCorrelation;
