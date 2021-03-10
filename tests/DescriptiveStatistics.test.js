@@ -10,6 +10,7 @@ const skewness = require('compute-skewness');
 const Covariance = require('../src/DescriptiveStatistics/Covariance');
 const cov = require('compute-covariance');
 const MeanDeviation = require('../src/DescriptiveStatistics/MeanDeviation');
+const Zscore = require('../src/DescriptiveStatistics/Zscore');
 
 
 test('Test Mean Function', () => {
@@ -50,5 +51,9 @@ test('Test Covariance Function', () => {
 test('Test MeanDeviation Function', () => {
     const testData = [1,2,3,4,5,6];
     expect(MeanDeviation(testData)).toBe(1.5);
+});
+test('Test Zscore Function', () => {
+    const testData = [1,2,3,4,5,6];
+    expect(Zscore(4, testData)).toBe(0.2672612419124244);
 });
 
