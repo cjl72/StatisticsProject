@@ -18,7 +18,8 @@
     "compute-skewness": "^1.0.1",
     "csv": "^5.3.2",
     "csv-parse": "latest",
-    "mathjs": "^9.2.0"
+    "mathjs": "^9.2.0",
+    "seedrandom": "^3.0.5"
   },
   "devDependencies": {
     "coveralls": "^3.1.0",
