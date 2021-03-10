@@ -9,6 +9,7 @@ const Skewness = require('../src/DescriptiveStatistics/Skewness');
 const skewness = require('compute-skewness');
 const Covariance = require('../src/DescriptiveStatistics/Covariance');
 const cov = require('compute-covariance');
+const MeanDeviation = require('../src/DescriptiveStatistics/MeanDeviation');
 
 
 test('Test Mean Function', () => {
@@ -45,5 +46,9 @@ test('Test Covariance Function', () => {
     const testData = [1,2,3,4,5,6];
     const testData2 = [1,1,1,1,1,1];
     expect(Covariance(testData, testData2)).toStrictEqual(cov(testData, testData2));
+});
+test('Test MeanDeviation Function', () => {
+    const testData = [1,2,3,4,5,6];
+    expect(MeanDeviation(testData)).toBe(1.5);
 });
 

@@ -1,4 +1,5 @@
 const Mean = require('../DescriptiveStatistics/Mean');
+const math = require('mathjs');
 
 function MeanDeviation(data) {
     let m = Mean(data);
