@@ -4,7 +4,7 @@ const Difference = require('../src/operations/Difference');
 const Product = require('../src/operations/Product');
 const Quotient = require('../src/operations/Quotient');
 const Square = require('../src/operations/Square');
-const squareRoot = require ('../src/operations/squareRoot');
+
 
 class Calculator {
     static Calculations = []
