@@ -1,4 +1,3 @@
-
 function SelectRandomItem(data) {
     if (data.length === 0){
         throw 'Error: The array is empty';
