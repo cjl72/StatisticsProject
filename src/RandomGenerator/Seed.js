@@ -1,7 +1,7 @@
 const seedRandom = require('seedrandom');
 
 function Seed(data, sd) {
-    seedRandom(sd, {global: true});
+    seedRandom(sd.toString(), {global: true});
     data.forEach(function(x) {
        if(x === sd){
            return x;
