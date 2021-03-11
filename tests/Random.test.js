@@ -1,6 +1,7 @@
 const randomListInt = require('../src/RandomGenerator/RandomListInt');
 const randomListDec = require('../src/RandomGenerator/RandomListDec');
 const Seed = require('../src/RandomGenerator/Seed');
+const SelectRandomItem = require('../src/RandomGenerator/SelectRandomItem');
 
 test('Test randomListInt Function', () => {
     expect(randomListInt(1,10,5,"hello world")).toStrictEqual([5,2,1,8,7]);
@@ -13,7 +14,7 @@ test('Test randomListDec Function', () => {
         16.589502464281402
     ]);
 });
-test('Test Seed Function To Set Seed And Choose That Number From List', () => {
+test('Test SelectRandomItem function to select a random item from array', () => {
     let arr = randomListInt(1,10,50,"hello world");
-    expect(Seed(arr,5)).toBe(5);
+    expect(SelectRandomItem(arr)).toBe(4);
 });
