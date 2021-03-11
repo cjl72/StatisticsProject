@@ -1,10 +1,11 @@
-module.exports = {
-    RandomNoSeedint (min, max, int = true) {
+
+    function RandomNoSeedint (min, max, int = true) {
         const res = Math.random() * (max - min) + min
 
         return int ? Math.round(res) : res
     },
-    RandomNoSeeddec (min, max, n = 2, int = true) {
+
+    function RandomNoSeeddec (min, max, n = 2, int = true) {
         const res = []
 
         for (let i = 0; i < n; i++) {
@@ -13,11 +14,11 @@ module.exports = {
 
         return res
     },
-    getItem (arr) {
+    function getItem (arr) {
         if (arr.length === 0) throw new Error("Array can't be empty")
         return arr[this.next(0, arr.length)]
     },
-    getItems (arr, n) {
+    function getItems (arr, n) {
         const indxes = new Set()
 
         if (n > arr.length) throw new Error("Array doesn't have enough items")
@@ -27,4 +28,9 @@ module.exports = {
 
         return [...indxes].map((v) => arr[v])
     }
+module.exports = {
+    RandomNoSeedint,
+    RandomNoSeeddec,
+    getItem,
+    getItems
 }

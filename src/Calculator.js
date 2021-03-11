@@ -4,6 +4,7 @@ const Difference = require('../src/operations/Difference');
 const Product = require('../src/operations/Product');
 const Quotient = require('../src/operations/Quotient');
 const Square = require('../src/operations/Square');
+const squareRoot = require('../src/operations/squareRoot');
 
 
 class Calculator {
@@ -34,8 +35,8 @@ class Calculator {
         Calculator.Calculations.push(calculation);
         return calculation.GetResults();
     }
-    static squareRoot(a,b) {
-        let calculation = new Calculation(a,b,squareRoot);
+    static squareRoot(a) {
+        let calculation = new Calculation(a,null,squareRoot);
         Calculator.Calculations.push(calculation);
         return calculation.GetResults();
     }
